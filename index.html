@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spell Checker</title>
+    <meta name="description" content="This is a spell checking library written in JavaScript.">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      div.footer {
+        width: 400px;
+        font-size: 15px;
+        color: #444444;
+        max-height: 99999999px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <center>
+        <br><br><br>
+        <h1>Spell Checker</h1>
+        <br><br><br>
+        <p style="width: 470px; text-align: left; font-size: 19px; max-height: 99999999px;"><b>Description:</b> This is a client-side spell checker written in JavaScript.</p>
+        <br><br><br>
+        <div class="input-group" style="width: 400px;">
+          <input autofocus="autofocus" style="font-size: 16px;" type="text" id="lookupText" onchange="wordTyped()" oninput="wordTyped()" onpaste="wordTyped()" class="form-control" placeholder="Enter a word...">
+        </div>
+        <br><br>
+        <div id="results"></div>
+        <div id="error"></div>
+        <br><br>
+        <div class="footer">
+          <hr><br>
+        </div>
+        <br><br>
+      </center>
+    </main>
+    <center>
+      <div>
+        <footer>
+          <b>&copy; 2023</b>
+        </footer>
+      </div>
+    </center>
+    <script src="english_word_list.js"></script>
+    <script src="spellchecker.js"></script>
+    <script charset="UTF-8">
+      set_valid_word_list(english_word_list);
+    </script>
+    <script src="ui.js"></script>
+  </body>
+</html>
